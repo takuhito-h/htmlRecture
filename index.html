@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<link rel="stylesheet" href="css/code.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+
+					<h2>displayプロパティの説明</h2>
+
+				</section>
+				<section>
+
+					<h2>代表的な値</h2>
+
+					<ul>
+						<li>block</li>
+						<li>inline</li>
+						<li>inline-block</li>
+					</ul>
+
+					<p>などがある。</p>
+
+				</section>
+
+				<section>
+
+					<h2>display:blockとは？</h2><br>
+
+					<h3>特徴</h3>
+
+					<ul>
+						<li>縦に積まれていく</li>
+						<li>幅 width と高さ height が指定できる</li>
+						<li>横幅を指定しない時には横いっぱいに表示される</li>
+						<li>上下左右に margin を指定できる</li>
+						<li>上下左右に padding を指定できる</li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h2>display:blockの例</h2>
+
+					<div class="testBody">
+						<div class="block-1">てきすとてきすと</div>
+						<div class="block-2">てきすとてきすと</div>
+						<div class="block-3">てきすとてきすと</div>
+					</div>
+					
+				</section>
+
+				<section>
+					<h2>使い道</h2>
+
+					<p>レイアウト全般、一番使う機会が多い</p>
+					
+				</section>
+
+				<section>
+					<h2>代表的な設定要素</h2>
+
+					<p>divやp、h1など</p>
+					
+				</section>
+
+				<section>
+
+					<h2>display:inlineとは？</h2><br>
+
+					<h3>特徴</h3>
+
+					<ul>
+						<li>横に並んでいく</li>
+						<li>幅 width と高さ height は指定できない。幅や高さは文字列の長さや文字の大きさなど、内容物のサイズ。</li>
+						<li>左右だけ margin を指定できる</li>
+						<li>左右に padding を指定できる。（実は上下も指定できるが、前後の行や要素にかぶってしまうので、あまり効果はわからない）</li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h2>display:inlineの例</h2>
+
+					<div class="testBody">
+						<p class="textBox"><span class="inline-1">てきすとてきすと</span>
+						<span class="inline-2">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</span><span class="inline-3">てきすとてきすと</span><span class="inline-4">てきすとてきすと</span></p>
+					</div>
+					
+				</section>
+
+				<section>
+					<h2>使い道</h2>
+
+					<p>テキストの装飾。<br>
+					テキストの色を変えたり、大きさをかえたり。<br>
+					レイアウトにはまず使わない。</p>
+					
+				</section>
+
+				<section>
+					<h2>代表的な設定要素</h2>
+
+					<p>spanやb、strongなど</p>
+					
+				</section>
+
+				<section>
+
+					<h2>display:inline-blockとは？</h2><br>
+
+					<h3>特徴</h3>
+
+					<ul>
+						<li>親要素の横幅を超えない限り、横に並んでいく</li>
+						<li>幅 width と高さ height が指定できる</li>
+						<li>上下左右に margin を指定できる</li>
+						<li>上下左右に padding を指定できる</li>
+						<li>vertical-align が指定できる。</li>
+						<li>text-alignプロパティが効く</li>
+					</ul>
+					
+				</section>
+
+				<section>
+					
+					<h2>一言で言えば<br>画像要素&lt;img&gt;みたいなもの</h2>
+
+				</section>
+
+				<section>
+					<h2>display:inline-blockの例</h2>
+
+					<div class="testBody">
+						<p class="textBox"><span class="inlineBlock-1">てきすとてきすと</span>
+						<span class="inlineBlock-2">てきすとてきすとてきすとてきすとてきすとてきすと</span><span class="inlineBlock-3">てきすとてきすと</span><span class="inlineBlock-4">てきすとてきすと</span><span>ああああああああああ</span></p>
+					</div>
+					
+				</section>
+
+				<section>
+					<h2>代表的な設定要素</h2>
+
+					<p>img要素（だけ？）</p>
+					
+				</section>
+
+				<section>
+					<h2>使い道（例）</h2>
+
+					<ul>
+						<li>ページング</li>
+						<li>隣合う要素同士の上下センタリング</li>
+					</ul>
+					
+				</section>
+
+				<section>
+
+					<h2>ページングなどにもよく使われる</h2>
+
+					<div class="testBody">
+						<ul class="paging">
+							<li>&lt;&lt;</li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>&gt;&gt;</li>
+						</ul>
+					</div>
+					
+				</section>
+
+				<section>
+				
+					<h2>上下センタリングに便利</h2>
+
+					<div class="testBody">
+						<div class="verticalC-block">
+							<div class="verticalC-img">画像</div>
+							<p class="verticalC-text">冬の北海道<br>JAL公式まとめ</p>
+						</div>
+					</div>
+					
+				</section>
+
+				<section>
+				
+					<h2>ただ残念な特徴もある</h2>
+
+					<div class="testBody">
+						<ul class="paging">
+							<li>&lt;&lt;</li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>&gt;&gt;</li>
+						</ul>
+					</div>
+
+					<p>marginを指定していないのによけいな余白が空く<br>（ホワイトスペース）</p>
+					
+				</section>
+
+				<section>
+				
+					<h2>この余白を消すには</h2>
+
+					<ul>
+						<li>改行をなくす</li>
+						<li>親要素のfont-sizeを0にする</li>
+						<li>改行をコメントアウトする</li>
+					</ul>
+
+					<p>など。</p>
+
+					<p><a href="http://coliss.com/articles/build-websites/operation/css/css-tutorial-space-between-inline-block-elements-by-css-tricks.html">詳しくはこちら</a></p>
+					
+				</section>
+
+				<section>
+
+					<h2>positionプロパティの説明</h2>
+
+				</section>
+
+				<section>
+
+					<h2>代表的な値</h2>
+
+					<ul>
+						<li>static（初期値）</li>
+						<li>relative</li>
+						<li>absolute</li>
+					</ul>
+
+					<p>などがある。</p>
+
+				</section>
+
+				<section>
+
+					<h2>static（初期値）</h2>
+
+					<p>初期値、静的配置。<br>
+					つまり通常のレイアウト。<br>
+					leftやtopといったプロパティは効かない。</p>
+
+				</section>
+
+				<section>
+
+					<div class="testBody">
+						<div class="w-static">
+							<div class="t-static">static</div>
+						</div>
+					</div>
+
+<pre><code><!-- html -->
+<div class="w-static">
+	<div class="t-static"></div>
+</div>
+
+<!-- css -->
+.slides .w-static{
+	position: static;
+	border: 1px solid #fff;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.slides .t-static{
+	background-color: #ff0000;
+	position: static;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 100px;
+}</code></pre>
+				</section>
+
+				<section>
+
+					<h2>relative</h2>
+
+					<p>相対位置指定。<br>
+					通常位置からleftやtopで指定した値の分だけ移動する。<br>
+					後に続く要素はrelativeで移動した要素があっても、初期位置に要素があるようにふるまう。</p>
+
+				</section>
+
+				<section>
+
+					<div class="testBody">
+						<div class="w-static">
+							<div class="t-relative">relative</div>
+							<div class="t-box">static</div>
+						</div>
+					</div>
+
+<pre><code><!-- html -->
+<div class="w-static">
+	<div class="t-relative">relative</div>
+	<div class="t-box">static</div>
+</div>
+
+<!-- css -->
+.slides .w-static{
+	position: static;
+	background-color: #880000;
+	border: 1px solid #fff;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.slides .t-relative{
+	background-color: #ff0000;
+	position: relative;
+	left: 300px;
+	top: 100px;
+	width: 75px;
+	height: 75px;
+}</code></pre>
+				</section>
+
+				<section>
+
+					<h2>absolute</h2>
+
+					<p>絶対位置指定。<br>
+					基準となる位置（static以外のpositionが指定された要素）から、絶対値での位置を指定する。<br>
+					positionの中では一番重要な値。<br>
+					</p>
+
+				</section>
+
+				<section>
+					<h2>もう少し説明</h2>
+					<h2>特徴</h2>
+
+					<ul>
+						<li>blockでwidth未指定でも横幅いっぱいじゃなくなる</li>
+						<li>ほかの値と違い、absoluteが指定されたものはレイアウト上ないものとして扱われる</li>
+						<li>そのため、他の要素と重なることが多々ある</li>
+						<li>先祖要素で一番近い、positionの指定された要素が基準になる</li>
+						<li>初期ではウィンドウ全体の左上が基準位置</li>
+					</ul>
+				</section>
+
+				<section>
+
+					<div class="testBody">
+						<div class="w-static">
+							<div class="t-absolute">absolute</div>
+							<div class="t-box">static</div>
+						</div>
+					</div>
+
+<pre><code><!-- html -->
+<div class="w-static">
+	<div class="t-absolute">absolute</div>
+	<div class="t-box">static</div>
+</div>
+
+<!-- css -->
+.w-static{
+	position: static;
+	background-color: #880000;
+	border: 1px solid #fff;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.t-absolute{
+	background-color: #ff0000;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 75px;
+	height: 75px;
+}</code></pre>
+				</section>
+
+				<section>
+
+					<div class="testBody">
+						<div class="w-relative">
+							<div class="t-absolute">absolute</div>
+							<div class="t-box">static</div>
+						</div>
+					</div>
+
+<pre><code><!-- html -->
+<div class="w-relative">
+	<div class="t-absolute">absolute</div>
+	<div class="t-box">static</div>
+</div>
+
+<!-- css -->
+.w-relative{
+	position: relative;
+	background-color: #880000;
+	border: 1px solid #fff;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.t-absolute-2{
+	background-color: #ff0000;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 75px;
+	height: 75px;
+}</code></pre>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
